@@ -86,3 +86,5 @@ print("Each student's loss:", losses)
 loss = np.mean(losses)
 
 print("Average loss:", loss)
+
+# cont
