@@ -58,6 +58,16 @@ print(probabilities)
 
 predictions = (probabilities >= 0.5).astype(int)
 
+
+errors = probabilities - y
+
+study_hours = X[:, 0]
+contributions = study_hours * errors
+
+study_weight_gradient = np.mean(contributions)
+
+print("Contributions:", contributions)
+print("Study-hours gradient:", study_weight_gradient)
 print(predictions)
 
 # EX4= PROBA AND PRED loss
@@ -88,3 +98,15 @@ loss = np.mean(losses)
 print("Average loss:", loss)
 
 # cont
+
+# GRADIENT
+
+errors = probabilities - y
+
+study_hours = X[:, 0]
+contributions = study_hours * errors
+
+study_weight_gradient = np.mean(contributions)
+
+print("Contributions:", contributions)
+print("Study-hours gradient:", study_weight_gradient)
